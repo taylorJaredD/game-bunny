@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bunny Hop Game</title>
+    <!-- LABjs is an efficient way to load several javascript files.
+         this helps ensure all files are loaded before loading the browser -->
+    <script src="LAB.min.js"></script>
+    <script>
+        $LAB
+              .script('data/levels.js').wait()
+              .script('Vector2.js').wait()
+              .script('Rectangle.js').wait()
+              .script('input/ButtonState.js').wait()
+              .script('input/Keyboard.js').wait()
+              .script('input/Mouse.js').wait()
+              .script('Canvas2D.js').wait()
+              .script('system/Keys.js').wait()
+              .script('system/Color.js').wait()
+              .script('Game.js').wait()
+              .script('IGameLoopObject.js').wait()
+              .script('GameStateManager.js').wait()
+              .script('Animation.js').wait()
+              .script('gameobjects/AnimatedGameObject.js').wait()
+              .script('gameobjects/GameObject.js').wait()
+              .script('gameobjects/GameObjectGrid.js').wait()
+              .script('gameobjects/GameObjectList.js').wait()
+              .script('gameobjects/SpriteGameObject.js').wait()
+              .script('level/Level.js').wait()
+
+              .script('BunnyHop.js').wait(function () {
+                  Game.start('mycanvas', 800, 480);
+              });
+    </script>
+
+  </head>
+  <body>
+    <canvas id="mycanvas" width="800" height="480"></canvas>
+  </body>
+</html>
